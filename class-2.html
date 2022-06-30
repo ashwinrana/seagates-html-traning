@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML tags</title>
+        <style>
+            table, th, td {
+                border: 1px solid black; 
+                border-collapse: collapse; 
+                background-color: aqua; 
+                border-radius: 10px;
+            }
+            .pn {
+                background-color: antiquewhite;
+            }
+            #div1 {
+                background-color: blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Table explanation-->
+        <table>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+            <tr>
+                <td>Babin</td>
+                <td>Rana</td>
+            </tr>
+        </table>
+        <br/>
+        <!-- UL and LI-->
+        <ul style="list-style-type: none;">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+        <ol type="a">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ol>
+        <br/>
+        <!-- Block and Inline elements-->
+        <p class="pn">Hello World</p>
+        <div id="div1"> Hello World <span style="background-color: red;"> Hello Span</span></div>
+        <p class="pn">Class 2</p>
+        <div id="div1">Div 2</div>
+        <!--iframe-->
+        <iframe src="http://103.198.9.118:8082/" title="Google Page" style="border: none; width: 1000px"></iframe>
+        <!-- Form and Button-->
+        <form>
+            <label>First Name: </label>
+            <input type="text" name="fname" value="Babin">
+            <label>Last Name: </label>
+            <input type="text" name="lname" value="Rana">
+            <br/>
+            <div>
+                <label>Description: </label>
+                <textarea rows="4" cols="50" name="textarea">
+                    This is textarea demo
+                </textarea>
+            </div>
+            <div>
+                <input type="radio" name="radio" value="one">
+                <label>One</label>
+                <input type="radio" name="radio" value="two">
+                <label>Two</label>
+            </div>
+            <br/>
+            <div>
+                <label>One</label>
+                <input type="checkbox" name="checkbox[]" value="one">
+                <label>Two</label>
+                <input type="checkbox" name="checkbox[]" value="two">
+            </div>
+            <button type="Button">Does not do anything</button>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </body>
+</html>
