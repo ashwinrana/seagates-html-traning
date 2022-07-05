@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .food {
+            list-style-position: inside;
+        }
+        
+        table, td, th {
+            /* border: 1px solid black; */
+            border-bottom: 1px solid black;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            height: 70px;
+            width: 50px;
+            text-align: center;
+            padding: 15px;
+        }
+
+        tr:hover {
+            background-color: orange;
+        }
+
+        tr:nth-child(even) {
+            background-color: beige;
+        }
+
+        .main-div {
+            display: inline;
+        }
+
+        .right-content {
+            float: right;
+        }
+        .li-style {
+            display: inline;
+        }
+
+        .stick {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+        }
+
+        .relative {
+            position: relative;
+            left: 30px;
+        }
+
+        .fixed {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+<!--CSS Position-->
+    <div class="stick">
+        Top Content
+    </div>
+
+    <div class="relative">
+        This is relative Style.
+    </div>
+
+    <div class="fixed">
+        This our bottom Fixed Text.
+    </div>
+    
+    <!-- Position the list item markers-->
+    <div class="main-div">
+        <div class="left-contents">
+            <h1>My Loving Foods</h1>
+            <ul class="food">
+                <li>Tea</li>
+                <li>Coffee</li>
+                <li>Mo:Mo</li>
+            </ul>
+        </div>
+
+        <!-- Display Inline-->
+
+    <div class="right-content">
+        <h1>My Loving Foods</h1>
+        <ul class="food">
+            <li>Tea</li>
+            <li>Coffee</li>
+            <li>Mo:Mo</li>
+        </ul>
+    </div>
+</div>
+
+<ul>
+    <li class="li-style">HTML</li>
+    <li class="li-style">CSS</li>
+    <li class="li-style">JS</li>
+</ul>
+
+<!--Table Style-->
+<table class="table">
+    <tr>
+        <th>Frist Name</th>
+        <th>Last Name</th>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>Doe</td>
+    </tr>
+    <tr>
+        <td>Jane</td>
+        <td>Doe</td>
+    </tr>
+    <tr>
+        <td>Another</td>
+        <td>One</td>
+    </tr>
+</table>
+
+<!--Table Style-->
+<table class="table">
+    <tr>
+        <th>Frist Name</th>
+        <th>Last Name</th>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>Doe</td>
+    </tr>
+    <tr>
+        <td>Jane</td>
+        <td>Doe</td>
+    </tr>
+    <tr>
+        <td>Another</td>
+        <td>One</td>
+    </tr>
+</table>
+
+<!--Table Style-->
+<table class="table">
+    <tr>
+        <th>Frist Name</th>
+        <th>Last Name</th>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>Doe</td>
+    </tr>
+    <tr>
+        <td>Jane</td>
+        <td>Doe</td>
+    </tr>
+    <tr>
+        <td>Another</td>
+        <td>One</td>
+    </tr>
+</table>
+
+<!--Table Style-->
+<table class="table">
+    <tr>
+        <th>Frist Name</th>
+        <th>Last Name</th>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>Doe</td>
+    </tr>
+    <tr>
+        <td>Jane</td>
+        <td>Doe</td>
+    </tr>
+    <tr>
+        <td>Another</td>
+        <td>One</td>
+    </tr>
+</table>
+    
+</body>
+</html>
