@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+        }
+
+        .black-box {
+            position: relative;
+            z-index: 1;
+            border: 1px solid black;
+            height: 100px;
+            margin: 30px;
+        }
+
+        .gray-box {
+            position: absolute;
+            z-index: 3;
+            background-color: gray;
+            height: 60px;
+            width: 70%;
+            left: 50px;
+            top: 50px;
+        }
+
+        .green-box {
+            position: absolute;
+            z-index: 2;
+            background-color: lightgreen;
+            width: 35%;
+            left: 270px;
+            top: -15px;
+            height: 100px;
+        }
+
+        #overflow {
+            padding: 15px;
+            width: 80%;
+            height: 100px;
+            border: 1px solid black;
+            /* overflow: auto; */
+            overflow-y: hidden;
+            overflow-x: scroll;
+        }
+
+        /* Decendant Selector (space) */
+        /* Child Selector (>) */
+        /* Adjacent Sibling Selector (+) */
+        /* General Sibiling Selector (~) */ 
+        div p {
+            background-color: cadetblue;
+        }
+
+        div:hover {
+            background-color: yellow;
+        }
+
+        .hidden-before-hover {
+            display: none;
+        }
+
+        .hover-me:hover p{
+            display: block;
+        }
+
+        .p-element::first-line {
+            color: red;
+        }
+
+        .p-element::before {
+            content: "Added Before";
+        }
+
+        .p-element::after {
+            content: "Added After";
+        }
+
+        ::selection {
+            color: blue;
+            background: black;
+        }
+
+        .pointer {
+            cursor: wait;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropbtn {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: antiquewhite;
+        }
+
+        li.dropdown {
+            display: inline;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: blue;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px white;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <!-- Horizantal Navbar-->
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#text1">Text 1</a></li>
+            <li><a href="#">Text 2</a></li>
+            <li><a href="#">Text 3</a></li>
+            <!-- Vertical Navbar -->
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Settings</a>
+                <div class="dropdown-content">
+                    <a href="#">Profile</a>
+                    <a href="#">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <!-- Z -index property -->
+    <h1>Z-index</h1>
+    <div class="container">
+        <div class="black-box">Black Box</div>
+        <div class="gray-box">Gray Box</div>
+        <div class="green-box">Green Box</div>
+    </div>
+
+    <!-- CSS Overflow-->
+    <div id="overflow">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis architecto illo quod, laboriosam, quam suscipit magnam, qui corrupti itaque inventore odio quos quo repellendus molestiae officia alias sit reprehenderit non! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus quisquam, voluptatibus veritatis modi, maxime ea maiores nostrum quibusdam perspiciatis vitae impedit cum, fugiat non expedita rem reprehenderit quos. Voluptatum, dolorem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint veniam nesciunt dicta similique ex voluptates optio laudantium vel aut tempore dolorum quas incidunt, dolor sed? Voluptatibus mollitia quos cumque ut!
+    </div>
+
+    <!-- Css Combinators-->
+
+    <div>
+        <p>Hello Testing Combinator</p>
+        <section>
+            <p>No Color</p>
+        </section>
+    </div>
+
+    <div>
+        <p>Testing 1</p>
+        <p>Testing 2</p>
+    </div>
+    <p>Testing 3</p>
+    <p>Testing 4</p>
+    <div>
+        <p>Testing 5</p>
+    </div>
+    <p>Testing 6</p>
+
+    <!-- CSS Pseudo Class -->
+    <div class="hover-me">
+        Hover Me for Hidden Content.
+        <p class="hidden-before-hover">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nostrum quae architecto nam numquam velit minima beatae asperiores ipsa at veritatis iure temporibus, ratione rem nihil distinctio corporis consectetur. Sed.
+        </p>
+    </div>
+
+    <!-- CSS Pseudo Element-->
+    <div class="element" id="text1">
+        <p class="p-element">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem maiores itaque id in optio placeat, dolorem eaque veniam quia, labore quasi qui aliquid ipsum debitis ipsa tenetur facere eum at. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam commodi ratione nostrum ex error facere eius expedita earum id incidunt illum eligendi quia repudiandae fuga labore, officiis quibusdam illo consequuntur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem natus cupiditate totam omnis dolor facilis nulla magnam repellat magni, consectetur porro qui voluptates architecto quis ipsam corrupti explicabo dolore iste.
+        </p>
+    </div>
+
+    <!-- Pointer-->
+    <p class="pointer">Pointer</p>
+</body>
+</html>
